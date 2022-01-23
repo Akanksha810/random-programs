@@ -19,11 +19,12 @@ class RemoveDuplicatesIntArray {
         String distinct = "";
    
         for(i=0;i<size;i++) {
-            if(distinct.contains(String.valueOf(array[i]))) {
+
+            if(distinct.contains("," +String.valueOf(array[i])+",")) {
                 array[i] = null;
             }
             else {
-                distinct = distinct + array[i];
+                distinct = distinct + ","  + array[i] + ",";
             }
         }
 
